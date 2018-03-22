@@ -5,7 +5,11 @@ import random
 from slackclient import SlackClient
 
 
-slack_client = SlackClient(os.environ.get('THINKBOT_ACCESS_TOKEN'))
+access_token = open("thinkbot_access_token", 'r').readline()[:-1]
+slack_client = SlackClient(access_token)
+
+
+#slack_client = SlackClient(os.environ.get('THINKBOT_ACCESS_TOKEN'))
 thinkbot_id = "B94NAGFU3"
 
 # Constants
